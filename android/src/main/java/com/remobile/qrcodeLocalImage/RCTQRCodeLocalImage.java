@@ -71,7 +71,7 @@ public class RCTQRCodeLocalImage extends ReactContextBaseJavaModule {
                 scanBitmap = null;
             }
         } else {
-            scanBitmap = BitmapFactory.decodeFile(path, options);
+            scanBitmap = BitmapFactory.decodeFile(path.replace("file://", ""), options);
         }
 
         if (scanBitmap == null) {
